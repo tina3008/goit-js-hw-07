@@ -39,16 +39,18 @@ destroy.addEventListener("click", () => {
   
  });
 
+//  boxes.style.display = "inline-flex";
+
 function createBoxes(amount){
   boxes.innerHTML = "";
   boxsize = 30;
 
-  for (let i =1; i <= amount; i+=1 ) {
+  for (let i =1; i <= amount; i+=1 ) {   
+    newDiv =`<div style= "width: ${boxsize} px; height: ${boxsize}px; background: ${getRandomHexColor()}; " /></div>`
+  
+    //  newDiv =`<div style= "padding-top: ${boxsize} px; padding-left: ${boxsize}px; background: ${getRandomHexColor()}; " /> </div>`
     
-
-   newDiv =`<div style= "width: ${boxsize} px; height: ${boxsize}px; background: ${getRandomHexColor()}; " /></div>`
-   boxes.insertAdjacentHTML("beforeend", newDiv);
-    // newDiv =`<div style= "padding-top: ${boxsize} px; padding-left: ${boxsize}px; background: ${getRandomHexColor()}; " /></div>`
+    boxes.insertAdjacentHTML("beforeend", newDiv);
     boxsize += 10;
   //  divArray.push(newDiv)
 
