@@ -7,12 +7,12 @@ function getRandomHexColor() {
 const btn = document.querySelector('.change-color');
 const spanColor = document.querySelector('.color')
 const body = document.querySelector('body')
-
+let colorSet
 
 const chngColor = (event) =>{
- 
-  body.style.backgroundColor = getRandomHexColor();
-  spanColor.textContent = getRandomHexColor(); 
+  colorSet = getRandomHexColor();
+  body.style.backgroundColor = colorSet;
+  spanColor.textContent = colorSet; 
   
 }
 
